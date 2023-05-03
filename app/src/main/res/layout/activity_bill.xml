@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/constraintBill"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="12dp"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".BillActivity">
+
+    <LinearLayout
+        android:id="@+id/invoiceLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/generate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_numbers"
+            android:ems="6"
+            android:gravity="center"
+            android:hint="@string/generate_invoice"
+            android:minHeight="48dp"
+            android:textColor="@color/black_variant" />
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Auto Invoice#" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearCustomer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/invoiceLinear"
+        android:orientation="horizontal">
+
+        <AutoCompleteTextView
+            android:id="@+id/searchCustomer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_search"
+            android:hint="@string/customer_name"
+            android:autofillHints="true"
+            android:layout_marginStart="18dp"
+            android:inputType="textCapWords"
+            android:minHeight="48dp"
+            android:textColor="@color/black_variant" />
+
+        <ImageButton
+            android:id="@+id/button3"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:onClick="newCustomer"
+            android:src="@drawable/ic_person" />
+
+        <CheckBox
+            android:id="@+id/walkInCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Walk In Customer" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/linearCustomer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal">
+
+        <AutoCompleteTextView
+            android:id="@+id/searchProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autofillHints="true"
+            android:inputType="textCapWords"
+            android:drawableLeft="@drawable/ic_search"
+            android:hint="@string/tags"
+            android:minHeight="48dp"
+            android:textColor="#212121" />
+
+        <ImageButton
+            android:id="@+id/scanQR"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:onClick="scanQR"
+            android:src="@drawable/ic_qr_code_scanner" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/linear"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/bill_head"
+        android:textColor="#212121"
+        android:textSize="18sp"
+        android:layout_marginTop="4dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/blankInvoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Blank Invoice"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/linearDc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tag" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewBill"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/total"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tag" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="Total: 0.00"
+        android:textColor="#212121"
+        app:layout_constraintBottom_toTopOf="@id/linearDc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/buttons"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save Invoice"
+            android:onClick="saveInvoice"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textColor="#212121" />
+
+    <LinearLayout
+        android:id="@+id/linearDc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/buttons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/applyDiscount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="6"
+            android:gravity="center"
+            android:hint="Discount"
+            android:inputType="numberDecimal|numberSigned"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/applyTax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="6"
+            android:gravity="center"
+            android:hint="Sales Tax"
+            android:inputType="numberDecimal|numberSigned"
+            android:minHeight="48dp" />
+
+        <CheckBox
+            android:id="@+id/percentCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="%" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

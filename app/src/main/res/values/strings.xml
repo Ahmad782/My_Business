@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">My Business</string>
+    <string name="billing">Billing</string>
+    <string name="please_select_an_action">Please Select An Action</string>
+    <string name="inventory">Inventory</string>
+    <string name="account_book">Account Book</string>
+    <string name="statistics">Statistics</string>
+    <string name="order_assistant">Order Assistant</string>
+    <string name="reminder_notes">REMINDER NOTES</string>
+    <string name="new_product_info">Product Details</string>
+    <string name="scan_product_barcode">Scan</string>
+    <string name="title">Title</string>
+    <string name="price">Price</string>
+    <string name="specific_tag">Stock Date</string>
+    <string name="company_name">Company Name</string>
+    <string name="available_stock">Available Stock</string>
+    <string name="expiry_date_popup_will_appear">Choose Expiry Date</string>
+    <string name="save">Save Product</string>
+    <string name="please_keep_manual_book_keeping_of_accounts_to_prevent_risk_of_any_accidental_loss">Keep manual book keeping of accounts to prevent risk of any accidental loss.</string>
+    <string name="total_indexed_products">Total Products: </string>
+    <string name="product_name_distributor">Product Name / Distributor</string>
+    <string name="generate_invoice">Invoice</string>
+    <string name="customer_name">Customer Name</string>
+    <string name="tags">Product Name / Company</string>
+    <string name="bill_head"># / Name / Company / Qty / Total / Action</string>
+    <string name="add_new_product">Add New Product</string>
+    <string name="product_list_is_empty">No product exists to enlist here.</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+</resources>

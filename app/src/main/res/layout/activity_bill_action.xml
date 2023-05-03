@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_margin="12dp"
+    android:layout_gravity="center"
+    android:gravity="center"
+    tools:context=".BillActionActivity">
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Invoice has been successfully saved in internal storage."
+        android:textSize="24sp" />
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_print"
+        android:text="Print invoice"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:textColor="#212121" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_pdf"
+        android:text="Save pdf"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:textColor="#212121" />
+
+</LinearLayout>

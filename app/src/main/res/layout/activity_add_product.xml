@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingTop="24dp"
+    android:paddingHorizontal="24dp"
+    tools:context=".AddProductActivity">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/black_variant"
+        android:drawablePadding="8dp"
+        android:textStyle="bold"
+        android:text="@string/new_product_info"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/barcodeEditAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="8"
+            android:gravity="center"
+            android:hint="Enter Barcode" />
+
+        <Button
+            android:id="@+id/button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_qr_code"
+            android:padding="8dp"
+            android:text="@string/scan_product_barcode"
+            android:onClick="scanBarCode"
+            android:textColor="@color/black_variant" />
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:startIconDrawable="@drawable/ic_title"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/titleInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f8f8f8"
+            android:hint="@string/title"
+            android:inputType="textCapWords"
+            android:textColorHint="#546E7A"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:startIconDrawable="@drawable/ic_money"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/priceInput"
+            android:background="#f8f8f8"
+            android:hint="@string/price"
+            android:inputType="numberDecimal|numberSigned"
+            android:textColorHint="#546E7A"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:startIconDrawable="@drawable/ic_date"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/stockInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f8f8f8"
+            android:hint="@string/specific_tag"
+            android:focusableInTouchMode="false"
+            android:textColorHint="#546E7A"
+            android:inputType="date"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:startIconDrawable="@drawable/ic_factory"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f8f8f8"
+            android:hint="@string/company_name"
+            android:inputType="textCapWords"
+            android:id="@+id/companyInput"
+            android:textColorHint="#546E7A"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:startIconDrawable="@drawable/ic_scale"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f8f8f8"
+            android:hint="@string/available_stock"
+            android:id="@+id/availableInput"
+            android:textColorHint="#546E7A"
+            android:inputType="number"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black_variant"
+        android:text="@string/expiry_date_popup_will_appear" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/save"
+        android:onClick="saveProduct"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:textColor="@color/black_variant"
+        android:textSize="16sp" />
+
+</LinearLayout>

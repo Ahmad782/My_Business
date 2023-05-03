@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="8dp"
+        android:textSize="18sp"
+        android:text="Enter Cash Paid" />
+
+    <TextView
+        android:id="@+id/textViewTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:layout_margin="8dp"
+        android:text="Total: " />
+
+    <EditText
+        android:id="@+id/editTextPaid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="7"
+        android:layout_margin="8dp"
+        android:drawableLeft="@drawable/ic_money"
+        android:inputType="numberDecimal|numberSigned"
+        android:hint="Cash Paid"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/textViewDue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:layout_margin="8dp"
+        android:text="Due: " />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:textColor="@color/black_variant"
+        android:text="Save Now" />
+</LinearLayout>

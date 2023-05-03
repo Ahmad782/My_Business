@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="16dp"
+    tools:context=".CustomerActivity">
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/black_variant"
+        android:text="Customer Profile"
+        android:textSize="24sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:startIconDrawable="@drawable/ic_title"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name_customer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f8f8f8"
+            android:hint="Customer Name"
+            android:textColorHint="#546E7A"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:startIconDrawable="@drawable/ic_numbers"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/number_customer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f8f8f8"
+            android:hint="Contact Number"
+            android:textColorHint="#546E7A"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:startIconDrawable="@drawable/ic_email"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email_customer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f8f8f8"
+            android:hint="Email Address"
+            android:textColorHint="#546E7A"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:startIconDrawable="@drawable/ic_location"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/address_customer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f8f8f8"
+            android:hint="Address"
+            android:textColorHint="#546E7A"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:startIconDrawable="@drawable/ic_money"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/pending_customer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f8f8f8"
+            android:hint="Pending Dues"
+            android:textColorHint="#546E7A"
+            android:inputType="number"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:padding="12dp"
+        android:textSize="18sp"
+        android:onClick="saveProfile"
+        android:textAllCaps="false"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:textColor="@color/black_variant"
+        android:text="Continue" />
+
+</LinearLayout>

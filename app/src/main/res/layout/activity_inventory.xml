@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:gravity="center_horizontal"
+    tools:context=".InventoryActivity">
+
+    <EditText
+        android:id="@+id/searchProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:autofillHints=""
+        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
+        android:drawableLeft="@drawable/ic_search"
+        android:drawablePadding="4dp"
+        android:hint="@string/product_name_distributor"
+        android:inputType="textFilter"
+        android:minHeight="48dp"
+        android:textColor="@color/black_variant" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/totalProducts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:text="@string/total_indexed_products"
+            android:textColor="@color/black_variant"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/button12"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="newProduct"
+            android:text="@string/add_new_product"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:textColor="@color/black_variant" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/inventoryRecylcerView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:visibility="gone">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/emptyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:textSize="16sp"
+        android:textColor="@color/black_variant"
+        android:text="@string/product_list_is_empty" />
+
+
+</LinearLayout>

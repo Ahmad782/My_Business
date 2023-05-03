@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLinear"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".HomeActivity">
+
+
+    <TextView
+        android:id="@+id/shopName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="24dp"
+        android:drawableLeft="@drawable/ic_business"
+        android:drawablePadding="8dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="imtiaz enterprises lodhran"
+        android:padding="4dp"
+        android:textColor="@color/black_variant"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/purple_200"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="1.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/purple_200" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:elevation="12dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:onClick="billClicked">
+
+                <TextView
+                    android:id="@+id/billTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:drawableTop="@drawable/ic_post_add"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:gravity="center"
+                    android:text="New Invoice"
+                    android:textColor="@color/black_variant"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="1.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/purple_200" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:elevation="12dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:onClick="inventoryClicked">
+
+                <TextView
+                    android:id="@+id/inventoryTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:drawableTop="@drawable/ic_inventory"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:gravity="center"
+                    android:text="Inventory"
+                    android:textColor="@color/black_variant"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="1.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/purple_200" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:elevation="12dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:onClick="customerClicked">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:drawableTop="@drawable/ic_identity"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:gravity="center"
+                    android:text="Customers"
+                    android:textColor="@color/black_variant"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="1.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/purple_200" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/purple_200"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="1.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/purple_200" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:elevation="12dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="archiveClicked">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:drawableTop="@drawable/ic_view_list"
+                android:drawablePadding="8dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="center"
+                android:text="Invoices"
+                android:textColor="@color/black_variant"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="1.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/purple_200" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:elevation="12dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="accountClicked">
+
+            <TextView
+                android:id="@+id/credutTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:drawablePadding="8dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="center"
+                android:text="Accounts"
+                android:textColor="@color/black_variant"
+                android:textStyle="bold"
+                app:drawableTopCompat="@drawable/ic_menu_book" />
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="1.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/purple_200" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:elevation="12dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="statisticsClicked">
+
+            <TextView
+                android:id="@+id/statisticsTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:drawablePadding="8dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="center"
+                android:text="Reports"
+                android:textColor="@color/black_variant"
+                android:textStyle="bold"
+                app:drawableTopCompat="@drawable/ic_chart" />
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="1.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/purple_200" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="@color/purple_200"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="1.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/purple_200" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:elevation="12dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="orderClicked">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:drawableTop="@drawable/ic_assistant"
+                android:drawablePadding="8dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="center"
+                android:text="Create Order"
+                android:textColor="@color/black_variant"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="1.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/purple_200" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:elevation="12dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="cloudClicked">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:drawablePadding="8dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="center"
+                android:text="Cloud Backup"
+                android:textColor="@color/black_variant"
+                android:textStyle="bold"
+                app:drawableTopCompat="@drawable/ic_cloud_upload" />
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="1.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/purple_200" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="@color/purple_200"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button13"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:drawableLeft="@drawable/ic_remove"
+        android:fontFamily="sans-serif-smallcaps"
+        android:onClick="removeAds"
+        android:text="buy premium"
+        android:textAllCaps="false"
+        android:textColor="@color/black_variant"
+        android:textStyle="bold" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-3940256099942544/6300978111" />
+
+
+</LinearLayout>

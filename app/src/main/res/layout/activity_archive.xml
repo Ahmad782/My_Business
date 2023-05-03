@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="8dp"
+    tools:context=".ArchiveActivity">
+
+    <EditText
+        android:id="@+id/editTextArchive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_search"
+        android:drawablePadding="4dp"
+        android:hint="Choose Category Below"
+        android:inputType="textCapWords"
+        android:minHeight="48dp"
+        android:textColor="@color/black_variant"
+        android:visibility="gone" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <RadioButton
+            android:id="@+id/radioButtonName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Customer Name"
+            android:textColor="#808080" />
+
+        <RadioButton
+            android:id="@+id/radioButtonInvoice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Invoice #"
+            android:textColor="#808080" />
+
+        <RadioButton
+            android:id="@+id/radioButtonDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:textColor="#808080" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="Invoice# / Name / Date / Total / Detail"
+        android:textColor="@color/black_variant"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear" />
+
+    <TextView
+        android:id="@+id/noInvoiceTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:drawableTop="@drawable/baseline_list_24"
+        android:text="Saved invoices will be shown here."
+        android:textColor="#212121"
+        android:textSize="16sp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearInvoice"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recylcerViewArcive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewSaved"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:text="Total Saved: 0"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

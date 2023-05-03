@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="4dp"
+    android:paddingTop="4dp"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/indexTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#212121"
+        android:layout_marginEnd="12dp"
+        android:text="1000" />
+
+    <TextView
+        android:id="@+id/nameItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:textColor="#212121"
+        android:ems="5"
+        android:text="Shampoo Sunsilk" />
+
+    <TextView
+        android:id="@+id/distributorItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#212121"
+        android:ems="4"
+        android:layout_marginEnd="12dp"
+        android:text="Sunsilk one" />
+
+    <TextView
+        android:id="@+id/quantityItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#212121"
+        android:layout_marginEnd="12dp"
+        android:ems="2"
+        android:text="100"/>
+
+    <TextView
+        android:id="@+id/totalItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#212121"
+        android:layout_marginEnd="12dp"
+        android:ems="3"
+        android:text="295000" />
+
+    <ImageButton
+        android:id="@+id/moreButton"
+        android:layout_width="36dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        app:srcCompat="@drawable/ic_more" />
+
+</LinearLayout>
